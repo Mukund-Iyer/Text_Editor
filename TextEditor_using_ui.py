@@ -45,6 +45,7 @@ class MyWindow(QtWidgets.QMainWindow):
         site_url = "https://github.com/Mukund-Iyer/Text_Editor/tree/Text_Editor_Only"
         webbrowser.open(site_url)
 
+
 app = QtWidgets.QApplication(sys.argv)
 window = MyWindow()
 window.show()
