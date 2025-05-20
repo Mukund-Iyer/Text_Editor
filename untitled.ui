@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>652</width>
-    <height>394</height>
+    <width>641</width>
+    <height>392</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -19,7 +19,7 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>651</width>
+      <width>641</width>
       <height>341</height>
      </rect>
     </property>
@@ -30,7 +30,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>652</width>
+     <width>641</width>
      <height>26</height>
     </rect>
    </property>
@@ -43,7 +43,14 @@
     <addaction name="Save_AsMenuItem"/>
     <addaction name="ExitMenuItem"/>
    </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="Help_MenuItem"/>
+   </widget>
    <addaction name="menuFile"/>
+   <addaction name="menuHelp"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
   <action name="ExitMenuItem">
@@ -64,6 +71,11 @@
   <action name="OpenMenuItem">
    <property name="text">
     <string>Open</string>
+   </property>
+  </action>
+  <action name="Help_MenuItem">
+   <property name="text">
+    <string>Git Source</string>
    </property>
   </action>
  </widget>
