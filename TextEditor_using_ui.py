@@ -7,6 +7,7 @@ class MyWindow(QtWidgets.QMainWindow):
         super(MyWindow, self).__init__()
         uic.loadUi("untitled.ui", self)  # Load the .ui file
         self.setWindowTitle("Text Editor")
+        self.OpenMenuItem.triggered.connect(self.open_file)
         self.ExitMenuItem.triggered.connect(self.exit_application)
         self.Save_AsMenuItem.triggered.connect(self.save_as)
         self.NewMenuItem.triggered.connect(self.new_file)
@@ -29,6 +30,14 @@ class MyWindow(QtWidgets.QMainWindow):
 
     def new_file(self):
         self.ui.plainTextEdit.clear()
+
+    def open_file(self):
+        option = QFileDialog.Options()
+        file_name, _ = QFileDialog.getOpenFileName(self,"Open...","","Text Files (*.txt);;All Files (*)",options=option)
+        if file_name:
+            with open(file_name, 'r') as file:
+                text = file.read()
+                self.plainTextEdit.setPlainText(text)
 
 app = QtWidgets.QApplication(sys.argv)
 window = MyWindow()

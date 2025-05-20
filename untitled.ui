@@ -39,6 +39,7 @@
      <string>File</string>
     </property>
     <addaction name="NewMenuItem"/>
+    <addaction name="OpenMenuItem"/>
     <addaction name="Save_AsMenuItem"/>
     <addaction name="ExitMenuItem"/>
    </widget>
@@ -58,6 +59,11 @@
   <action name="NewMenuItem">
    <property name="text">
     <string>New</string>
+   </property>
+  </action>
+  <action name="OpenMenuItem">
+   <property name="text">
+    <string>Open</string>
    </property>
   </action>
  </widget>
